@@ -33,12 +33,12 @@ public class AlarmSys implements Iterable<Alarm>{
         }
     }
 
-    private int getCurrentHour() {
+    private static int getCurrentHour() {
         Calendar calendar = new GregorianCalendar();
         int currentHour = calendar.get(Calendar.HOUR_OF_DAY);
         return currentHour;
     }
-    private Date getCurrentDate() {
+    private static Date getCurrentDate() {
         Calendar calendar = new GregorianCalendar();
         int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
         int currentMonth = calendar.get(Calendar.MONTH) + 1; // Os meses em Calendar são indexados a partir de zero
