@@ -1,7 +1,10 @@
 package poo;
 
-public class AlarmDup extends Throwable {
+public class AlarmDup extends Exception {
     private String description;
+    public AlarmDup(String description) {
+        this.description = description;
+    }
     public String getMessage() {
         return "Already exist: " + description;
     }
