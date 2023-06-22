@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d95a9bf0-32ba-4b7e-b52b-f4296502caf9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project - Alarm.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/poo/Alarm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/poo/AlarmDup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/poo/AlarmSys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/poo/DailyAlarm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/poo/Date.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/poo/Iterable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/poo/SingleAlarm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/poo/WeekDay.java" afterDir="false" />
+    <list default="true" id="d95a9bf0-32ba-4b7e-b52b-f4296502caf9" name="Changes" comment="innit files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/poo/AlarmDup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/poo/AlarmDup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/poo/AlarmSys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/poo/AlarmSys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/poo/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/poo/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/poo/SingleAlarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/poo/SingleAlarm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/poo/WeekDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/poo/WeekDay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +57,18 @@
       <option name="presentableId" value="Default" />
       <updated>1687462234750</updated>
     </task>
+    <task id="LOCAL-00001" summary="innit files">
+      <created>1687465480948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687465480948</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="innit files" />
+    <option name="LAST_COMMIT_MESSAGE" value="innit files" />
   </component>
 </project>
