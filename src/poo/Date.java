@@ -17,7 +17,19 @@ public class Date {
     @Override public String toString() {
         return day+"-"+month+"-"+year+" ("+getWeekDay()+")";
     }
-    public WeekDay getWeekDay(){
 
+    public int getDay() {return day;}
+    public int getMonth() {return month;}
+    public int getYear() {return year;}
+
+    public WeekDay getWeekDay(){
+        // formula do calendário de Zeller
+        int q, m, y, h, j;
+        q = day;
+        m = (month - 3 + 4800) % 4800;
+        y = (year + m / 12) % 400;
+        m %= 12;
+        j = (q + 2 * m + 3 * (m + 1) / 5 + y + y / 4 - y / 100 + y / 400) % 7;
+        return WeekDay.values()[j];
     }
 }

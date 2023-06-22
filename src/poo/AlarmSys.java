@@ -6,6 +6,7 @@ import java.util.Iterator;
 
 public class AlarmSys implements Iterable<Alarm>{
     private List<Alarm> alarms = new ArrayList<>();
+
     public void start(Alarm al) throws AlarmDup{
         for (Alarm existingAlarm : alarms) {
             if (existingAlarm.equalName(al)){
