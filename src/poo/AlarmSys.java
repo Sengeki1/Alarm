@@ -25,11 +25,17 @@ public class AlarmSys implements Iterable<Alarm>{
         int currentHour = getCurrentHour();
         Date currentDate = getCurrentDate();
 
+        List<Alarm> triggeredAlarms = new ArrayList<>();
+
         for (Alarm al : alarms) {
             if (al.trigger(currentHour, currentDate, this)) {
-                System.out.println(currentDate + " " + currentHour + "h -> " + al);
-                stop(al);
+                triggeredAlarms.add(al);
             }
+        }
+
+        for (Alarm al : triggeredAlarms) {
+            System.out.println(currentDate + " " + currentHour + "h -> " + al);
+            stop(al);
         }
     }
 
