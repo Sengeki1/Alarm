@@ -1,5 +1,7 @@
 package poo;
 
-public interface Iterable {
+import java.util.Iterator;
 
+public interface Iterable<T> {
+    Iterator<T> iterator();
 }
