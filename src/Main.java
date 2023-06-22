@@ -6,7 +6,8 @@ public class Main {
         Alarm a2 = new DailyAlarm("Acordar", 7, WeekDay.WorkDays);
         AlarmSys as = new AlarmSys();
         try {
-            as.start(a1).start(a2).run();
+            as.start(a1).start(a2);
+            as.run();
         } catch (AlarmDup e) {
             System.out.println(e.getMessage());
         }

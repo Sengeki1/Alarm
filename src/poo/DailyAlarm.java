@@ -27,6 +27,10 @@ public class DailyAlarm implements Alarm{
 
     @Override
     public boolean equalName(Alarm al) {
+        if (al instanceof DailyAlarm) {
+            DailyAlarm otherAlarm = (DailyAlarm) al;
+            return this.name.equals(otherAlarm.name);
+        }
         return false;
     }
 

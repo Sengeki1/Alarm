@@ -21,6 +21,10 @@ public class SingleAlarm implements Alarm{
 
     @Override
     public boolean equalName(Alarm al) {
+        if (al instanceof SingleAlarm) {
+            SingleAlarm otherAlarm = (SingleAlarm) al;
+            return this.name.equals(otherAlarm.name);
+        }
         return false;
     }
 
