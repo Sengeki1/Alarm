@@ -24,27 +24,16 @@ public class AlarmSys implements Iterable<Alarm> {
     }
 
     public void run() {
-        int currentHour = getCurrentHour();
         Date currentDate = getCurrentDate();
+        List<Alarm> alarmsCopy = new ArrayList<>(alarms); // Cria uma cópia da lista de alarmes
 
-        List<Alarm> triggeredAlarms = new ArrayList<>();
-
-        for (Alarm al : alarms) {
-            if (al.trigger(currentHour, currentDate, this)) {
-                triggeredAlarms.add(al);
+        for (int hour = 0; hour < 24; hour++) {
+            for (Alarm al : alarmsCopy) {
+                if (al.trigger(hour, currentDate, this)) {
+                    System.out.println(currentDate + " " + hour + "h -> " + al);
+                }
             }
         }
-
-        for (Alarm al : triggeredAlarms) {
-            System.out.println(currentDate + " " + currentHour + "h -> " + al);
-            stop(al);
-        }
-    }
-
-    private static int getCurrentHour() {
-        Calendar calendar = new GregorianCalendar();
-        int currentHour = calendar.get(Calendar.HOUR_OF_DAY);
-        return currentHour;
     }
 
     private static Date getCurrentDate() {
