@@ -23,12 +23,13 @@ public class Date {
     public int getYear() {return year;}
 
     public WeekDay getWeekDay(){
-        int q, m, K, J, h;
+        // fórmula do calendário de Zeller
+        int q, m, y, h, j;
         q = day;
         m = (month - 3 + 4800) % 4800;
-        K = (year + m / 12) % 400;
-        J = m % 12;
-        h = (q + 13 * (J + 1) / 5 + K + K / 4 + 5) % 7;
-        return WeekDay.values()[h];
+        y = (year + m / 12) % 400;
+        m %= 12;
+        j = (q + 2 * m + 3 * (m + 1) / 5 + y + y / 4 - y / 100 + y / 400) % 7;
+        return WeekDay.values()[j];
     }
 }
