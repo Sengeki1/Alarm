@@ -24,6 +24,6 @@ public abstract class BaseAlarm implements Alarm {
 
     @Override
     public String toString() {
-        return name + ":" + hour + "h";
+        return name + ": " + hour + "h";
     }
 }

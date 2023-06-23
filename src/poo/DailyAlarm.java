@@ -1,17 +1,19 @@
 package poo;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class DailyAlarm extends BaseAlarm {
-    private Set<WeekDay> weekDays;
+    private List<WeekDay> weekDays;
 
     public DailyAlarm(String name, int hour, WeekDay[] wds) {
         super(name, hour);
-        weekDays = new HashSet<>();
+        weekDays = new ArrayList<>();
         for (WeekDay day : wds) {
             weekDays.add(day);
         }
+        Collections.sort(weekDays);
     }
 
     @Override
