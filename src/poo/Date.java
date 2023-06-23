@@ -18,10 +18,6 @@ public class Date {
         return day+"-"+month+"-"+year+" ("+getWeekDay()+")";
     }
 
-    public int getDay() {return day;}
-    public int getMonth() {return month;}
-    public int getYear() {return year;}
-
     public WeekDay getWeekDay(){
         // fórmula do calendário de Zeller
         int q, m, y, h, j;
