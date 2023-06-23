@@ -9,6 +9,10 @@ public abstract class BaseAlarm implements Alarm {
         this.hour = hour;
     }
 
+    public int getHour() {
+        return hour;
+    }
+
     @Override
     public boolean equalName(Alarm al) {
         if (al instanceof BaseAlarm) {

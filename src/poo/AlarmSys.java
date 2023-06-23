@@ -1,26 +1,28 @@
 package poo;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Iterator;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Iterator;
+import java.util.List;
 
-public class AlarmSys implements Iterable<Alarm>{
+public class AlarmSys implements Iterable<Alarm> {
     private List<Alarm> alarms = new ArrayList<>();
 
-    public AlarmSys start(Alarm al) throws AlarmDup{
+    public AlarmSys start(Alarm al) throws AlarmDup {
         for (Alarm existingAlarm : alarms) {
-            if (existingAlarm.equalName(al)){
+            if (existingAlarm.equalName(al)) {
                 throw new AlarmDup(existingAlarm.toString());
             }
         }
         alarms.add(al);
         return this;
     }
+
     public void stop(Alarm al) {
         alarms.remove(al);
     }
+
     public void run() {
         int currentHour = getCurrentHour();
         Date currentDate = getCurrentDate();
@@ -44,6 +46,7 @@ public class AlarmSys implements Iterable<Alarm>{
         int currentHour = calendar.get(Calendar.HOUR_OF_DAY);
         return currentHour;
     }
+
     private static Date getCurrentDate() {
         Calendar calendar = new GregorianCalendar();
         int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
@@ -52,6 +55,7 @@ public class AlarmSys implements Iterable<Alarm>{
         Date currentDate = new Date(currentDay, currentMonth, currentYear);
         return currentDate;
     }
+
     @Override
     public Iterator<Alarm> iterator() {
         return alarms.iterator();
